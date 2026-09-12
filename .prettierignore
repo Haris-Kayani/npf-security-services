@@ -1,0 +1,9 @@
+node_modules
+dist
+docs/references
+docs/qa
+package-lock.json
+.openai
+worker
+scripts/prepare-sites-build.mjs
+tests/sites-worker.test.mjs

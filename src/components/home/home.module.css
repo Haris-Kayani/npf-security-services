@@ -1,0 +1,384 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  background: var(--color-surface);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  padding: 4.7rem 2.6rem 4.7rem max(var(--page-gutter), calc((100vw - var(--content-width)) / 2));
+}
+
+.hero h1 {
+  max-width: 100%;
+  margin: 1.4rem 0 1.6rem;
+  font-size: clamp(3rem, 5.25vw, 5.4rem);
+  font-weight: 700;
+  line-height: 1.055;
+  letter-spacing: -0.03em;
+}
+
+.hero h1 > span {
+  display: block;
+}
+
+.heroDescription {
+  max-width: 100%;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.6rem;
+  margin-block: 2.6rem 3rem;
+}
+
+.heroImage {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  min-height: 660px;
+  overflow: hidden;
+}
+
+.heroImage > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+.imageWatermark {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 94%;
+  padding: 0.5rem 1.1rem;
+  background: rgb(17 26 46 / 72%);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.3vw, 4.3rem);
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.heroImage figcaption {
+  position: absolute;
+  inset: auto 1.5rem 0.9rem;
+  padding: 0.6rem 0.75rem;
+  background: rgb(17 26 46 / 80%);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+.process {
+  margin-top: 2.5rem;
+  border-top: 2px solid var(--color-indigo-muted);
+  padding-top: 2.6rem;
+  padding-bottom: 3.7rem;
+}
+
+.sectionEyebrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.draftNote {
+  color: var(--color-text-secondary);
+  font-size: 0.7rem;
+}
+
+.processList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.7rem;
+  padding: 0;
+  margin: 2.2rem 0 0;
+  list-style: none;
+}
+
+.processList li {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.stepNumber {
+  color: var(--color-indigo-muted);
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.processList li > div {
+  border-left: 1px solid var(--color-line-strong);
+  padding-left: 1.3rem;
+}
+
+.processList h3,
+.serviceList h3 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  line-height: 1.35;
+  font-weight: 650;
+}
+
+.processList p,
+.serviceList p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.informationBorder {
+  border-block: 1px solid var(--color-line);
+}
+
+.informationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: 2.8rem 3.4rem;
+}
+
+.sectionTitle {
+  margin: 0 0 2rem;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.sectionTitle::after {
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin-top: 1.2rem;
+  background: var(--color-indigo-muted);
+  content: "";
+}
+
+.serviceList {
+  display: grid;
+  gap: 1.9rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.serviceList h3 {
+  margin-bottom: 0.15rem;
+}
+
+.serviceList p {
+  font-size: 0.9375rem;
+}
+
+.coverage {
+  border-left: 1px solid var(--color-line);
+  padding-left: 3.4rem;
+}
+
+.coverageDetails {
+  max-width: 26rem;
+}
+
+.coverageIntro {
+  margin: 0 0 1.4rem;
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+}
+
+.coverageDetails dl {
+  margin: 0 0 1.75rem;
+}
+
+.coverageDetails dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.2rem;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 0.9375rem;
+}
+
+.coverageDetails dd {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-display);
+  white-space: nowrap;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 2.4rem;
+}
+
+.about h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.about p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 1100px) {
+  .heroContent {
+    padding-right: 1.7rem;
+  }
+
+  .heroImage {
+    min-height: 600px;
+  }
+
+  .heroActions {
+    gap: 1.25rem;
+  }
+
+  .processList {
+    gap: 1.4rem;
+  }
+
+  .processList li {
+    gap: 0.9rem;
+  }
+
+  .stepNumber {
+    font-size: 2.8rem;
+  }
+
+  .processList li > div {
+    padding-left: 0.9rem;
+  }
+
+  .draftNote {
+    max-width: 13rem;
+    text-align: right;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent {
+    padding: 3.25rem var(--page-gutter) 2.5rem;
+  }
+
+  .hero h1 {
+    max-width: 14ch;
+    font-size: clamp(2.8rem, 9.7vw, 4.5rem);
+    margin-block: 1.15rem 1.3rem;
+  }
+
+  .heroActions {
+    margin-block: 2rem;
+    gap: 1.5rem;
+  }
+
+  .heroImage {
+    min-height: 0;
+    aspect-ratio: 1.16;
+  }
+
+  .heroImage > img {
+    object-position: 65% 66%;
+  }
+
+  .imageWatermark {
+    top: 29%;
+    font-size: clamp(2rem, 8vw, 3.3rem);
+  }
+
+  .heroImage figcaption {
+    inset-inline: 1rem;
+  }
+
+  .process {
+    margin-top: 2rem;
+    padding-block: 1.75rem 2.5rem;
+  }
+
+  .sectionEyebrow {
+    display: block;
+  }
+
+  .draftNote {
+    display: block;
+    max-width: none;
+    margin-top: 0.6rem;
+    text-align: left;
+  }
+
+  .processList {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-top: 1.75rem;
+  }
+
+  .processList li {
+    gap: 1.2rem;
+  }
+
+  .processList li > div {
+    padding-left: 1.3rem;
+  }
+
+  .informationGrid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+    padding-block: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .coverage {
+    border-left: 0;
+    border-top: 1px solid var(--color-line);
+    padding: 2.5rem 0 0;
+  }
+
+  .coverageDetails {
+    max-width: none;
+  }
+
+  .coverageDetails dl > div {
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding-block: 2rem;
+  }
+}
+
+

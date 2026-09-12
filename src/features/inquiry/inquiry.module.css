@@ -1,0 +1,161 @@
+.dialog {
+  width: min(580px, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  border: 0;
+  border-radius: 4px;
+  padding: 0;
+  overflow-y: auto;
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.dialog::backdrop {
+  background: rgb(8 14 36 / 65%);
+}
+
+.dialogInner {
+  padding: 1.5rem 2rem 2rem;
+}
+
+.dialogHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dialogHeader :global(.eyebrow) {
+  font-size: 0.65rem;
+}
+
+.closeButton {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  color: var(--color-ink);
+  background: var(--color-surface-muted);
+  cursor: pointer;
+}
+
+.dialog h2 {
+  margin: 1rem 0 0.65rem;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.introduction {
+  margin: 0 0 1.3rem;
+  color: var(--color-text-secondary);
+}
+
+.previewNotice {
+  margin: 0 0 1.5rem;
+  border-left: 3px solid var(--color-indigo-muted);
+  padding: 0.8rem 1rem;
+  background: var(--color-surface-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.requiredNote {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+}
+
+.form:not([hidden]) {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.field label span {
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 2px;
+  padding: 0.65rem 0.75rem;
+  color: var(--color-ink);
+  background: var(--color-white);
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+  max-height: 280px;
+}
+
+.form > button {
+  margin-top: 0.2rem;
+}
+
+.result h3 {
+  font-size: 1.7rem;
+  margin: 0 0 0.8rem;
+}
+
+.result > p {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+}
+
+.result dl {
+  margin: 1.5rem 0;
+}
+
+.result dl > div {
+  border-bottom: 1px solid var(--color-line);
+  padding-block: 0.8rem;
+}
+
+.result dt {
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+}
+
+.result dd {
+  overflow-wrap: anywhere;
+  margin: 0.25rem 0 0;
+}
+
+.message {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 480px) {
+  .dialogInner {
+    padding: 1.1rem 1.25rem 1.5rem;
+  }
+
+  .dialog h2 {
+    font-size: 2rem;
+  }
+}
+
+

@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light;
+  --color-white: #ffffff;
+  --color-ink: #090f3b;
+  --color-text-secondary: #5c6984;
+  --color-indigo-muted: #485a80;
+  --color-red: #dc0022;
+  --color-red-hover: #b9001c;
+  --color-surface: #fafbfe;
+  --color-surface-muted: #edf0f5;
+  --color-line: #dde2eb;
+  --color-line-strong: #aab5c8;
+  --color-draft-background: #fff0ee;
+  --color-draft-text: #b51d2c;
+  --font-body: "Roboto", Arial, sans-serif;
+  --font-display: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  --content-width: 1320px;
+  --page-gutter: clamp(1.25rem, 4.4vw, 4rem);
+  --radius-small: 2px;
+}

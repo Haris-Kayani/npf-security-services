@@ -1,0 +1,46 @@
+# Dependencies, build output and local tooling
+node_modules/
+dist/
+.vite/
+.fallow/
+coverage/
+*.log
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Project working documents, plans, design evidence and agent memory
+/docs/
+/plans/
+/research/
+/design/
+/artifacts/
+/Agent.MD
+/AGENTS.md
+*.[mM][dD]
+*.markdown
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+*.odt
+*.odp
+*.ods
+
+# Only conventional repository documentation is eligible by default
+!/README.md
+!/LICENSE.md
+!/CONTRIBUTING.md
+!/SECURITY.md
+!/CHANGELOG.md
+
+# Generated imagery (including assets used by the local prototype)
+/public/images/placeholders/
+/public/images/generated/
+/generated-images/
+**/generated-images/
