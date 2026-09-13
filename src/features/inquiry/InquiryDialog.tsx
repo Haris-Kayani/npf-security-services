@@ -178,4 +178,3 @@ export function InquiryDialog({ onDismiss }: InquiryDialogProps) {
     </dialog>
   );
 }
-

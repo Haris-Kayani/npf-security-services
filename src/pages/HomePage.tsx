@@ -4,7 +4,7 @@ import { SiteFooter } from "../components/layout/SiteFooter";
 import { HeroSection } from "../components/home/HeroSection";
 import { ProcessSection } from "../components/home/ProcessSection";
 import { ServicesSection } from "../components/home/ServicesSection";
-import { AboutSection } from "../components/home/AboutSection";
+import { ClientsSection } from "../components/home/ClientsSection";
 import { InquiryDialog } from "../features/inquiry/InquiryDialog";
 
 export function HomePage() {
@@ -24,7 +24,7 @@ export function HomePage() {
         <HeroSection onRequestAssessment={openInquiry} />
         <ProcessSection />
         <ServicesSection onRequestAssessment={openInquiry} />
-        <AboutSection />
+        <ClientsSection />
       </main>
       <SiteFooter />
       {inquiryOpen && <InquiryDialog onDismiss={() => setInquiryOpen(false)} />}

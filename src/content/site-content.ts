@@ -4,7 +4,7 @@ export const siteContent = {
   navigation: [
     { label: "Services", href: "#services" },
     { label: "Coverage", href: "#coverage" },
-    { label: "About NPF SS", href: "#about" },
+    { label: "Our clients", href: "#clients" },
   ],
   hero: {
     eyebrow: "National Police Foundation",
@@ -32,4 +32,3 @@ export const siteContent = {
     { kind: "address", label: "Office address", value: "TO BE FILLED" },
   ],
 } as const;
-

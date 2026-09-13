@@ -11,7 +11,11 @@ export function HeroSection({ onRequestAssessment }: HeroSectionProps) {
     <section className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.heroContent}>
         <p className="eyebrow">{siteContent.hero.eyebrow}</p>
-        <h1 id="hero-heading">{siteContent.hero.headingLines.map((line) => <span key={line}>{line} </span>)}</h1>
+        <h1 id="hero-heading">
+          {siteContent.hero.headingLines.map((line) => (
+            <span key={line}>{line} </span>
+          ))}
+        </h1>
         <p className={styles.heroDescription}>{siteContent.hero.description}</p>
         <div className={styles.heroActions}>
           <button className="button button-primary" type="button" onClick={onRequestAssessment}>
@@ -40,4 +44,3 @@ export function HeroSection({ onRequestAssessment }: HeroSectionProps) {
     </section>
   );
 }
-

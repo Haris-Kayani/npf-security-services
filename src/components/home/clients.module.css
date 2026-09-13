@@ -1,0 +1,111 @@
+.section {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
+  padding-block: 2.5rem;
+}
+
+.introduction h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.introduction p {
+  margin: 0.4rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.viewport {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: client-scroll var(--loop-duration) linear infinite;
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0 2.5rem 0 0;
+  list-style: none;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 200px;
+  width: 200px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.logo {
+  display: block;
+  width: 144px;
+  height: 136px;
+  object-fit: contain;
+}
+
+.wideLogo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.viewport:hover .track,
+.viewport:focus-within .track {
+  animation-play-state: paused;
+}
+
+@keyframes client-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .logoGroup {
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viewport {
+    overflow: visible;
+  }
+
+  .track {
+    display: block;
+    width: 100%;
+    animation: none;
+  }
+
+  .logoGroup {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .logoGroup[aria-hidden="true"],
+  .logoItem[aria-hidden="true"] {
+    display: none;
+  }
+}
