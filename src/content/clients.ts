@@ -30,4 +30,11 @@ export const clients: readonly Client[] = [
     width: 1254,
     height: 1254,
   },
+  {
+    id: "national-police-foundation",
+    name: "National Police Foundation",
+    logo: "/images/clients/national-police-foundation.png",
+    width: 1254,
+    height: 1254,
+  },
 ];

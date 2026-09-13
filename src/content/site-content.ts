@@ -2,9 +2,11 @@ export const siteContent = {
   name: "NPF Security Services",
   fullName: "National Police Foundation Security Services",
   navigation: [
-    { label: "Services", href: "#services" },
-    { label: "Coverage", href: "#coverage" },
-    { label: "Our clients", href: "#clients" },
+    { label: "Services", href: "/services" },
+    { label: "Coverage", href: "/coverage" },
+    { label: "Our clients", href: "/clients" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Careers", href: "/careers" },
   ],
   hero: {
     eyebrow: "National Police Foundation",

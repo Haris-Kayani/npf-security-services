@@ -52,7 +52,14 @@ export function SiteHeader({ onRequestAssessment }: SiteHeaderProps) {
             }}
           >
             {siteContent.navigation.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
+              <a
+                key={item.href}
+                href={item.href}
+                aria-current={
+                  window.location.pathname.replace(/\/+$/, "") === item.href ? "page" : undefined
+                }
+                onClick={() => setMenuOpen(false)}
+              >
                 {item.label}
               </a>
             ))}

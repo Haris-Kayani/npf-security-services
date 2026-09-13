@@ -205,7 +205,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .previewBar > div > span:last-child {
     display: none;
   }

@@ -9,7 +9,7 @@ export function Brand({ compact = false }: BrandProps) {
   return (
     <a
       className={[styles.brand, compact ? styles.brandCompact : ""].join(" ")}
-      href="#top"
+      href="/"
       aria-label={siteContent.name + " home"}
     >
       <img src="/images/brand/npf-logo.png" alt="" width="80" height="80" />
