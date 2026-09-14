@@ -15,10 +15,12 @@ export function ServicesSection({ onRequestAssessment }: ServicesSectionProps) {
             Services
           </h2>
           <ul className={styles.serviceList}>
-            {siteContent.serviceSlots.map((id) => (
-              <li key={id}>
-                <h3>Service name — TO BE FILLED</h3>
-                <p>Service description — TO BE FILLED</p>
+            {siteContent.services.map((service) => (
+              <li key={service.id}>
+                <a className={styles.serviceLink} href="/services">
+                  <span>{service.title}</span>
+                  <ArrowRightIcon size={20} aria-hidden="true" />
+                </a>
               </li>
             ))}
           </ul>
@@ -49,8 +51,8 @@ export function ServicesSection({ onRequestAssessment }: ServicesSectionProps) {
             </div>
             <img
               className={styles.coverageMap}
-              src="/images/coverage/pakistan-map.png"
-              alt="Map of Pakistan marking Peshawar, Islamabad, Rawalpindi, Sargodha, Faisalabad, Lahore, Quetta, Multan and Karachi."
+              src="/images/coverage/map.webp"
+              alt="Map of Pakistan showing security coverage locations including Gilgit-Baltistan, Peshawar, Islamabad, Rawalpindi, Mirpur AJK, Sargodha, Faisalabad, Lahore, Quetta, Multan, Sukkur, Hyderabad, Gwadar and Karachi."
               width={1122}
               height={1402}
               loading="lazy"

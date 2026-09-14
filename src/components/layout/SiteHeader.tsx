@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ListIcon, XIcon } from "@phosphor-icons/react";
+import { ListIcon, MapPinIcon, XIcon } from "@phosphor-icons/react";
 import { siteContent } from "../../content/site-content";
 import { Brand } from "./Brand";
 import styles from "./layout.module.css";
@@ -10,6 +10,10 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ onRequestAssessment }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const headquartersAddress =
+    siteContent.contacts
+      .find(({ kind }) => kind === "address")
+      ?.value.replace(/\s*\n\s*/g, " ") ?? "3rd Floor, NPF Plaza, Service Road South, Mauve Area, Sector G-10/4, Islamabad";
 
   function openInquiry() {
     setMenuOpen(false);
@@ -20,8 +24,10 @@ export function SiteHeader({ onRequestAssessment }: SiteHeaderProps) {
     <>
       <div className={styles.previewBar}>
         <div className="container">
-          <span>Design preview</span>
-          <span>Company content awaiting confirmation</span>
+          <span className={styles.previewAddress}>
+            <MapPinIcon size={13} weight="bold" aria-hidden="true" />
+            {headquartersAddress}
+          </span>
         </div>
       </div>
       <header className={styles.header}>

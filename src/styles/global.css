@@ -119,6 +119,7 @@ textarea,
 }
 
 .text-link:hover {
+  color: var(--color-red);
   text-decoration-color: currentColor;
 }
 

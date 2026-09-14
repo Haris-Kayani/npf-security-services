@@ -26,20 +26,30 @@ export function HeroSection({ onRequestAssessment }: HeroSectionProps) {
             Explore services
           </a>
         </div>
-        <span className="draft-label">Draft content — to be replaced</span>
+        <span className="draft-label">Draft content - to be replaced</span>
       </div>
       <figure className={styles.heroImage}>
-        <img
-          src="/images/placeholders/office-entrance.png"
-          alt="Placeholder photograph of an anonymous guard outside an office entrance; to be replaced with approved company photography."
-          width="1234"
-          height="1275"
-          fetchPriority="high"
+        <video
+          className={styles.heroBackgroundVideo}
+          src="/videos/npf-hero-loop.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          tabIndex={-1}
         />
-        <span className={styles.imageWatermark} aria-hidden="true">
-          Placeholder
-        </span>
-        <figcaption>NPF SS photography — TO BE REPLACED</figcaption>
+        <video
+          className={styles.heroMainVideo}
+          src="/videos/npf-hero-loop.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-label="National Police Foundation Security Services overview video"
+        />
       </figure>
     </section>
   );
